@@ -1,3 +1,4 @@
+-- should be good preset but HIGH FILE SIZE :troll:
 return {
     Strong = {
         LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "MangledShuffled"; PrettyPrint = false; Seed = 0;
