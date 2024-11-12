@@ -2,6 +2,7 @@ return {
     Strong = {
         LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "MangledShuffled"; PrettyPrint = false; Seed = 0;
         Steps = {
+            {Name = "Vmify", Settings = { VM = "CompilerD" } },
             {Name = "PaidAntiTamper"; Settings = {}},
             {Name = "Vmify"; Settings = {}},
             {Name = "EncryptStrings"; Settings = {}},
