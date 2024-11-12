@@ -182,8 +182,8 @@ if not sourceFile then ObscuraLua.Logger:error("No input file was specified!") e
 
 if not config then
     ObscuraLua.Logger:warn(
-        "No config was specified, falling back to Minify preset");
-    config = ObscuraLua.Presets.Minify;
+        "No config was specified, falling back to Strong preset");
+    config = ObscuraLua.Presets.Strong;
 end
 
 -- Extend the config based on the new CLI options
