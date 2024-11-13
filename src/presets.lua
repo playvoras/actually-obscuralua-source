@@ -1,6 +1,6 @@
 return {
     Strong = {
-        LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "MangledShuffled"; PrettyPrint = false; Seed = 0;
+        LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "Mangled"; PrettyPrint = false; Seed = 0;
         Steps = {
             {Name = "PaidAntiTamper"; Settings = {}},
             {Name = "EncryptStrings"; Settings = {}},
@@ -11,7 +11,7 @@ return {
         }
     },
     uhmthisistoohigh = {
-        LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "MangledShuffled"; PrettyPrint = false; Seed = 0;
+        LuaVersion = "LuaU"; VarNamePrefix = ""; NameGenerator = "Mangled"; PrettyPrint = false; Seed = 0;
         Steps = {
             {Name = "PaidAntiTamper"; Settings = {}},
             {Name = "EncryptStrings"; Settings = {}},
