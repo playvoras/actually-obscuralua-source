@@ -6,7 +6,7 @@
 -- generates insanely long variable names with longer scripts
 
 
-local util = require("prometheus.util");
+local util = require("ObscuraLua.util");
 local chararray = util.chararray;
 
 local Underscores = {
