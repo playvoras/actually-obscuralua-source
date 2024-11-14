@@ -44,11 +44,12 @@ return {
                 CustomVariable = "__OBSCURALUA__"
             }},
             { Name = "Vmify", Settings = { VM = "random" } },
-            { Name = "ConstantArray", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "WrapInFunction", Settings = {} },
+            { Name = "StringsToExpressions", Settings = {} },
+            { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "ProxifyLocals", Settings = {} },
