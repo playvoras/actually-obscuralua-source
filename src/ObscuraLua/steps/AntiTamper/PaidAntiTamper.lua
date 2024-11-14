@@ -198,7 +198,7 @@ if pcall ~= originalPcall or math.random ~= originalMathRandom then
 end
 
 -- List of critical global variables that should not be changed
-local criticalGlobals = {"os", "io", "file", "debug"}
+local criticalGlobals = {"os", "io", "file", "debug", "getmetatable", "setmetatable"}
 
 -- Check for environment tampering
 for _, v in ipairs(criticalGlobals) do
