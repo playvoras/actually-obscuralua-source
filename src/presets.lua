@@ -1,3 +1,4 @@
+
 local function uuid()
     return string.gsub('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx', '[xy]', function(c)
         return string.format('%x', (c == 'x') and math.random(0, 0xf) or math.random(8, 0xb))
@@ -27,7 +28,7 @@ return {
             { Name = "WrapInFunction", Settings = {} },
         }
     },
-    ["Strong"] = {
+    ["Strong"] = { -- so many haha
         LuaVersion = "LuaU",
         VarNamePrefix = "",
         NameGenerator = "MangledShuffled",
@@ -48,6 +49,8 @@ return {
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "WrapInFunction", Settings = {} },
+            { Name = "StringsToExpressions", Settings = {} },
+            { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
