@@ -31,7 +31,7 @@ return {
     ["Strong"] = { -- muahahaha
         LuaVersion = "LuaU",
         VarNamePrefix = "",
-        NameGenerator = "MangledShuffled",
+        NameGenerator = "Mangled",
         PrettyPrint = false,
         Seed = 0,
         Steps = {
@@ -46,6 +46,7 @@ return {
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "EncryptStrings", Settings = {} },
+            { Name = "Vmify", Settings = { VM = "random" } },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
@@ -61,7 +62,6 @@ return {
             { Name = "WrapInFunction", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "Vmify", Settings = { VM = "random" } },
         }
     }
 }
