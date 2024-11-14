@@ -4,4 +4,5 @@ return {
 	Il 		  		  		 = require("ObscuraLua.namegenerators.Il");
 	Number 		  		  	 = require("ObscuraLua.namegenerators.number");
 	Confuse  		  		 = require("ObscuraLua.namegenerators.confuse");
+	underscore  		  		 = require("ObscuraLua.namegenerators.underscore");
 }
