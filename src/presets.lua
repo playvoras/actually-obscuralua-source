@@ -28,7 +28,7 @@ return {
             { Name = "WrapInFunction", Settings = {} },
         }
     },
-    ["Strong"] = { -- muahahaha
+    ["Strong"] = { -- muahahaha im crazy with this preset lmao
         LuaVersion = "LuaU",
         VarNamePrefix = "",
         NameGenerator = "Mangled",
@@ -62,6 +62,7 @@ return {
             { Name = "WrapInFunction", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
+            { Name = "AddVararg", Settings = {} },
         }
     }
 }
