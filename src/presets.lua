@@ -47,7 +47,10 @@ return {
             { Name = "ConstantArray", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
+            { Name = "StringsToExpressions", Settings = {} },
             { Name = "WrapInFunction", Settings = {} },
+            { Name = "StringsToExpressions", Settings = {} },
+            { Name = "NumbersToExpressions", Settings = {} },
             { Name = "ProxifyLocals", Settings = {} },
         }
     }
