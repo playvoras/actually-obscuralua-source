@@ -49,7 +49,6 @@ return {
             { Name = "EncryptStrings", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "Vmify", Settings = { VM = "random" } },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
