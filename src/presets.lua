@@ -35,10 +35,10 @@ return {
         PrettyPrint = false,
         Seed = 0,
         Steps = {
+            { Name = "PaidAntiTamper", Settings = {} },
             { Name = "AddVararg", Settings = {} },
             { Name = "EncryptStrings", Settings = {} },
             { Name = "SplitStrings", Settings = {} },
-            { Name = "PaidAntiTamper", Settings = {} },
             { Name = "WatermarkCheck", Settings = {
                 Content = "This script is safeguarded by the paid version of ObscuraLua. Version 1.1.0.",
                 CustomVariable = "__OBSCURALUA__"
