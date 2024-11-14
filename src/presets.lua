@@ -1,4 +1,3 @@
-
 local function uuid()
     return string.gsub('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx', '[xy]', function(c)
         return string.format('%x', (c == 'x') and math.random(0, 0xf) or math.random(8, 0xb))
@@ -28,7 +27,7 @@ return {
             { Name = "WrapInFunction", Settings = {} },
         }
     },
-    ["Strong"] = { -- muahahaha im crazy with this preset lmao
+    ["Strong"] = {
         LuaVersion = "LuaU",
         VarNamePrefix = "",
         NameGenerator = "Mangled",
@@ -38,30 +37,21 @@ return {
             { Name = "PaidAntiTamper", Settings = {} },
             { Name = "AddVararg", Settings = {} },
             { Name = "EncryptStrings", Settings = {} },
+            { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
             { Name = "SplitStrings", Settings = {} },
             { Name = "WatermarkCheck", Settings = {
                 Content = "This script is safeguarded by the paid version of ObscuraLua. Version 1.1.0.",
                 CustomVariable = "__OBSCURALUA__"
             }},
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
+            { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
             { Name = "EncryptStrings", Settings = {} },
             { Name = "Vmify", Settings = { VM = "random" } },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
             { Name = "ProxifyLocals", Settings = {} },
             { Name = "WrapInFunction", Settings = {} },
-            { Name = "StringsToExpressions", Settings = {} },
-            { Name = "NumbersToExpressions", Settings = {} },
+            { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
             { Name = "AddVararg", Settings = {} },
         }
     }
