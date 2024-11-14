@@ -35,7 +35,6 @@ return {
         PrettyPrint = false,
         Seed = 0,
         Steps = {
-            { Name = "Vmify", Settings = { VM = "random" } },
             { Name = "AddVararg", Settings = {} },
             { Name = "EncryptStrings", Settings = {} },
             { Name = "SplitStrings", Settings = {} },
@@ -62,6 +61,7 @@ return {
             { Name = "WrapInFunction", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
+            { Name = "Vmify", Settings = { VM = "random" } },
         }
     }
 }
