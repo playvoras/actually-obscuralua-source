@@ -44,6 +44,7 @@ return {
                 Content = "This script is safeguarded by the paid version of ObscuraLua. Version 1.1.0.",
                 CustomVariable = "__OBSCURALUA__"
             }},
+            { Name = "EncryptStrings", Settings = {} },
             { Name = "StringsToExpressions", Settings = {} },
             { Name = "NumbersToExpressions", Settings = {} },
             { Name = "Vmify", Settings = { VM = "random" } },
