@@ -38,20 +38,20 @@ return {
             { Name = "AddVararg", Settings = {} },
             { Name = "EncryptStrings", Settings = {} },
             { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
-            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 100 } },
             { Name = "SplitStrings", Settings = {} },
             { Name = "WatermarkCheck", Settings = {
                 Content = "This script is safeguarded by the paid version of ObscuraLua. Version 1.1.0.",
                 CustomVariable = "__OBSCURALUA__"
             }},
             { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
-            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 100 } },
             { Name = "EncryptStrings", Settings = {} },
             { Name = "Vmify", Settings = { VM = "random" } },
             { Name = "ProxifyLocals", Settings = {} },
             { Name = "WrapInFunction", Settings = {} },
             { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
-            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 100 } },
             { Name = "AddVararg", Settings = {} },
         }
     }
