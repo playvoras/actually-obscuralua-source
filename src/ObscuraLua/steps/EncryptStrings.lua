@@ -164,7 +164,7 @@ function EncryptStrings:CreateEncrypionService()
         local charmap = {};
         local i = 0;
 
-        local nums = {};
+        local nums = table.create(256);
         for i = 1, 256 do
             nums[i] = i;
         end
