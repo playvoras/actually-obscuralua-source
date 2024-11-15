@@ -5,6 +5,15 @@ local function uuid()
 end
 
 return {
+    ["Minify"] = {
+        LuaVersion = "LuaU",
+        VarNamePrefix = "",
+        NameGenerator = "Mangled",
+        PrettyPrint = false,
+        Seed = 0,
+        Steps = {
+        }
+    },
     ["Basic"] = {
         LuaVersion = "LuaU",
         VarNamePrefix = "",
