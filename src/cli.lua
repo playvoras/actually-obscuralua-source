@@ -205,13 +205,14 @@ end
 
 local source = table.concat(lines_from(sourceFile), "\n");
 local pipeline = ObscuraLua.Pipeline:fromConfig(config);
-local out = pipeline:apply(source, sourceFile);
+local obfuscatedsource = pipeline:apply(source, sourceFile);
+local minifiedsource = ObscuraLua.Pipeline:fromConfig(ObscuraLua.Presets.Minify):apply(obfuscatedsource, sourceFile);
 ObscuraLua.Logger:info(string.format("Writing output to \"%s\"", outFile));
 
 -- Write Output
 local handle = io.open(outFile, "w");
 if handle then
-    handle:write(out);
+    handle:write(minifiedsource);
     handle:close();
 else
     ObscuraLua.Logger:error(string.format(
