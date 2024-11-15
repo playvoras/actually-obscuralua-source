@@ -12,6 +12,8 @@ return {
         PrettyPrint = false,
         Seed = 0,
         Steps = {
+            { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 30 } }
         }
     },
     ["Basic"] = {
