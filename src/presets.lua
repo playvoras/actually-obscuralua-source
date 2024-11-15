@@ -16,10 +16,22 @@ return {
             { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 30 } }
         }
     },
+    ["testing"] = {
+        LuaVersion = "LuaU",
+        VarNamePrefix = "",
+        NameGenerator = "Mangled",
+        PrettyPrint = false,
+        Seed = 0,
+        Steps = {
+            { Name = "EncryptStrings", Settings = {} },
+            { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
+            { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 30 } }
+        }
+    },
     ["Basic"] = {
         LuaVersion = "LuaU",
         VarNamePrefix = "",
-        NameGenerator = "MangledShuffled",
+        NameGenerator = "Mangled",
         PrettyPrint = false,
         Seed = 0,
         Steps = {
