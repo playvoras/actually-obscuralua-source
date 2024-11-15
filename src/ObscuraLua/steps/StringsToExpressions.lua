@@ -85,6 +85,64 @@ function StringsToExpressions:init(settings)
             local trimFunc = function(str) return string.sub(str, splitIndex + 1) end
             return Ast.ModifyExpression(Ast.StringExpression(modifiedVal), trimFunc)
         end,
+                function(val, depth) -- Caesar Cipher
+            local shift = math.random(1, 25)
+            local cipherVal = ""
+            for i = 1, #val do
+                local char = string.byte(val, i)
+                if char >= 65 and char <= 90 then -- Uppercase letters
+                    cipherVal = cipherVal .. string.char(((char - 65 + shift) % 26) + 65)
+                elseif char >= 97 and char <= 122 then -- Lowercase letters
+                    cipherVal = cipherVal .. string.char(((char - 97 + shift) % 26) + 97)
+                else
+                    cipherVal = cipherVal .. string.char(char)
+                end
+            end
+            local decipherFunc = function(str)
+                local decipheredVal = ""
+                for i = 1, #str do
+                    local char = string.byte(str, i)
+                    if char >= 65 and char <= 90 then
+                        decipheredVal = decipheredVal .. string.char(((char - 65 - shift + 26) % 26) + 65)
+                    elseif char >= 97 and char <= 122 then
+                        decipheredVal = decipheredVal .. string.char(((char - 97 - shift + 26) % 26) + 97)
+                    else
+                        decipheredVal = decipheredVal .. string.char(char)
+                    end
+                end
+                return decipheredVal
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(cipherVal), decipherFunc)
+        end,
+        function(val, depth) -- Substring Swapping
+            if string.len(val) < 2 then return false end
+            local len = string.len(val)
+            local pos1, pos2 = math.random(1, len - 1), math.random(2, len)
+            if pos1 > pos2 then pos1, pos2 = pos2, pos1 end
+            local part1 = string.sub(val, 1, pos1 - 1)
+            local part2 = string.sub(val, pos1, pos2)
+            local part3 = string.sub(val, pos2 + 1)
+            local swappedVal = part1 .. string.reverse(part2) .. part3
+            local unswapFunc = function(str)
+                return part1 .. string.reverse(string.sub(str, pos1, pos2)) .. part3
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(swappedVal), unswapFunc)
+        end,
+        function(val, depth) -- Encoding as Hexadecimal
+            local hexVal = ""
+            for i = 1, #val do
+                hexVal = hexVal .. string.format("%02X", string.byte(val, i))
+            end
+            local decodeFunc = function(str)
+                local decodedVal = ""
+                for i = 1, #str, 2 do
+                    local byte = tonumber(string.sub(str, i, i + 1), 16)
+                    decodedVal = decodedVal .. string.char(byte)
+                end
+                return decodedVal
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(hexVal), decodeFunc)
+        end,
     }
     
     self.ExpressionGenerators = util.shuffle(self.ExpressionGenerators)
