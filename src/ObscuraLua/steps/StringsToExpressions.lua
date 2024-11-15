@@ -147,7 +147,7 @@ function StringsToExpressions:init(settings)
             local reversed = string.reverse(val)
             local palindromicVal = val .. reversed
             local unappendFunc = function(str)
-                return string.sub(str, 1, #str // 2)
+                return string.sub(str, 1, #str / 2)
             end
             return Ast.ModifyExpression(Ast.StringExpression(palindromicVal), unappendFunc)
         end,
