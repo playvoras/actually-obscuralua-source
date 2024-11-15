@@ -143,6 +143,29 @@ function StringsToExpressions:init(settings)
             end
             return Ast.ModifyExpression(Ast.StringExpression(hexVal), decodeFunc)
         end,
+        function(val, depth)
+            local reversed = string.reverse(val)
+            local palindromicVal = val .. reversed
+            local unappendFunc = function(str)
+                return string.sub(str, 1, #str // 2)
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(palindromicVal), unappendFunc)
+        end,
+        function(val, depth)
+            local repeatedVal = val:gsub(".", "%1%1")
+            local unrepeatFunc = function(str)
+                return str:gsub("(.)(%1)", "%1")
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(repeatedVal), unrepeatFunc)
+        end,
+        function(val, depth)
+            local vowelMap = { a = "@", e = "3", i = "!", o = "0", u = "µ", A = "@", E = "3", I = "!", O = "0", U = "µ" }
+            local replacedVal = val:gsub("[aeiouAEIOU]", vowelMap)
+            local revertFunc = function(str)
+                return str:gsub("@", "a"):gsub("3", "e"):gsub("!", "i"):gsub("0", "o"):gsub("µ", "u")
+            end
+            return Ast.ModifyExpression(Ast.StringExpression(replacedVal), revertFunc)
+        end,
     }
     
     self.ExpressionGenerators = util.shuffle(self.ExpressionGenerators)
