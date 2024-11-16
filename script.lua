@@ -1,54 +1,41 @@
-print("Custom Benchmark")
-local Iterations = 100000
-print("Iterations: " .. tostring(Iterations))
+local str1 = "Hello"
+local str2 = "World"
 
-local tests = {
-    ["CLOSURE"] = function()
-        for Idx = 1, Iterations do
-            (function()
-                if not true then
-                    print("Hey gamer.")
-                end
-            end)()
-        end
-    end,
-    ["SETTABLE"] = function()
-        local T = {}
-        for Idx = 1, Iterations do
-            T[tostring(Idx)] = "EPIC GAMER " .. tostring(Idx)
-        end
-    end,
-    ["GETTABLE"] = function()
-        local T = {}
-        for Idx = 1, Iterations do
-            T[1] = T[tostring(Idx)]
-        end
-    end,
-    ["FUNCTION CALL"] = function()
-        local function foo() end
-        for Idx = 1, Iterations do
-            foo()
-        end
-    end,
-    ["ARITHMETIC"] = function()
-        local a = 0
-        for Idx = 1, Iterations do
-            a = a + Idx
-        end
-    end,
-    ["STRING MANIPULATION"] = function()
-        local s = ""
-        for Idx = 1, Iterations do
-            s = s .. tostring(Idx)
-        end
-    end,
-}
+local combined = str1 .. ", " .. str2 .. "!"
+print("Concatenated String: " .. combined)
 
-local totalStart = os.time()
-for testName, testFunc in pairs(tests) do
-    print(testName .. " testing.")
-    local start = os.time()
-    testFunc()
-    print("Time:", os.time() - start .. "s")
+local length = #combined
+print("Length of the string: " .. length)
+
+local substring = string.sub(combined, 1, 5)
+print("Substring: " .. substring)
+
+local upper = string.upper(combined)
+local lower = string.lower(combined)
+print("Uppercase: " .. upper)
+print("Lowercase: " .. lower)
+
+local start_pos, end_pos = string.find(combined, "World")
+if start_pos then
+    print("'World' found at position: " .. start_pos .. " to " .. end_pos)
+else
+    print("'World' not found!")
 end
-print("Total Time:", os.time() - totalStart .. "s")
+
+local replaced = string.gsub(combined, "World", "Lua")
+print("Replaced String: " .. replaced)
+
+print("Characters in the string:")
+for i = 1, #combined do
+    local char = string.sub(combined, i, i)
+    print("Character " .. i .. ": " .. char)
+end
+
+local words = {}
+for word in string.gmatch(combined, "%w+") do
+    table.insert(words, word)
+end
+print("Words in the string:")
+for i, word in ipairs(words) do
+    print("Word " .. i .. ": " .. word)
+end
