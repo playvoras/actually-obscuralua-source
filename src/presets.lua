@@ -23,6 +23,7 @@ return {
         PrettyPrint = false,
         Seed = 0,
         Steps = {
+            { Name = "PaidAntiTamper", Settings = {} }, -- lol bad way
             { Name = "EncryptStrings", Settings = {} },
             { Name = "StringsToExpressions", Settings = { MaxDepth = 100 } },
             { Name = "NumbersToExpressions", Settings = { MaxDepth = 100, Range = 30 } }
